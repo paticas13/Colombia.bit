@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.theamleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../inicio/css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo-code.svg" alt="" style="width: 50px; ">
+            <section class="titulo">
+                <span>C</span>
+                <span>o</span>
+                <span>l</span>
+                <span>o</span>
+                <span>m</span>
+                <span>b</span>
+                <span>i</span>
+                <span>a</span>
+                <span>.</span>
+                <span>B</span>
+                <span>i</span>
+                <span>t</span>
+            
+            </section>   
+        <a th:href="@{/}">
+            <button>Volver</button>
+        </a>
+    </header>
+    <div class="registro-sesion">
+        <form class="formulario">
+            <h2 class="cuenta gratis">
+                ¿Eres nuevo por aqui?<br>
+                Crea una cuenta ya!!
+            </h2>
+            
+            <input type="text" placeholder="Nombre">
+            <input type = "text" placeholder = "Apellidos">
+            <input type="text" placeholder="Cedula">
+            <input type="date" name="Fecha de Nacimiento" id="">
+            <input type = "email" placeholder = "Email">
+            <input type = "password" placeholder = "Contraseña">
+            <input type = "button" value = "Registrarse">
+            <input class="sign-up-btn" type = "button" value = "Iniciar Sesion">
+            <input type = "button" value = "Cancelar">
+
+
+
+        </form>
+    </div>
+    <div class="inicio-sesion">
+        <form class="formulario">
+            <h2 class="cuenta gratis">
+                ¿Ya tienes una cuenta?<br>
+                Inicia sesion aca!!
+            </h2>
+            <input type = "email" placeholder = "Email">
+            <input type = "password" placeholder = "Contraseña">
+            <input type = "button" value = "Iniciar Sesion">
+            <input class="sign-in-btn" type = "button" value = "Registrarse">
+            <input type = "button" value = "Cancelar">
+    
+    
+    
+        </form>
+
+    </div>
+    <script src="inicio/js/scripts.js"></script>
+</body>
+</html>

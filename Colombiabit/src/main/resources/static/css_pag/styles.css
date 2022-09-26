@@ -1,0 +1,360 @@
+.intro ul{
+    
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+.intro li{
+    list-style: none;
+    text-decoration: none;
+    display: list-item;
+    margin: 10px;
+    background-color: rgb(5, 3, 3);
+    border-radius: 5px;
+    font-size: 3vh;
+}
+
+.intro a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+*,
+*::after,
+*::before{
+    padding: 0;
+    font-family: inherit;
+    box-sizing: inherit;
+}
+.intro{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    background: rgb(0, 0, 0);
+    transition: 1s;
+
+}
+.intro img{
+    top: 50px;
+    position: absolute;
+    width: 200px;
+    
+
+}
+.intro p{
+    color: rgb(222, 221, 221);
+    font-size: 1.6rem;
+    margin-top: 15px;
+}
+.intro .logo{
+    font-size: 2.5rem;
+    color: white;
+
+}
+.logo-parts{
+    position: relative;
+    display: inline-block;
+    bottom: -10px;
+    
+}
+.logo-parts.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out.5s;
+}
+.logo-parts.fade {
+    bottom: 250px;
+    opacity: 0;
+    transition: ease-in-out.5s;
+}
+.content{
+    padding: 50px;
+    font-size: 2rem;
+
+    
+}
+.container{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+li{text-decoration: none; list-style: none;}
+
+.hero{
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
+    url('https://cdn.pixabay.com/photo/2020/05/20/03/50/gears-5193383_960_720.png');
+    background-size: cover;
+    min-height: 500px;
+    height: 100vh;
+    color: rgb(26, 24, 24);
+}
+
+
+.ppsl{
+    --state-close: scale(0);
+    --state-hamburguer:scale(1);
+    --state-menu: translate(-100%);
+
+    padding: 40px;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(2, max-content);
+}
+
+.nav__link img{
+    width: 30px;
+    border-radius: 10px;
+    align-items: center;
+    
+}
+
+.ppsl:target{
+    --state-menu: translate(0);
+    --state-close: scale(1);
+    --state-hamburguer:scale(0);
+}
+
+.nav__logo{
+    font-size: 2.5rem;
+    z-index: 1;
+}
+
+.nav__hamburguer, 
+.nav__close{
+    cursor: pointer;
+    grid-column: -2/-1;
+    grid-row: 1/2;
+    transition: .4s transform;
+}
+
+.nav__hamburguer{
+    transform: var(--state-hamburguer);
+}
+
+.nav__close{
+    transform: var(--state-close);
+}
+
+.nav__icon{
+    width: 40px;
+    padding: px;
+}
+
+.nav__links{
+    background-color: rgb(28, 25, 25);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+
+    display: grid;
+    align-content: center;
+    gap: 2em;
+    padding-left: 5%;
+    
+
+    transform: var(--state-menu);
+    transition: .3s transform;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+}
+
+.nav__item{
+    list-style: none;
+}
+
+.nav__link{
+    color: rgb(14, 12, 12);
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+.ppsl button{
+    
+    border-radius: 30px;
+    text-decoration: none;
+    color: azure;
+    background-color:  rgb(227, 127, 28);
+    width: 200px;
+    text-align: center;
+}
+.ppsl button:hover{
+    background-color: rgb(232, 165, 98);
+}
+.ppsl a{
+    color: aliceblue;
+}
+.ppsl button a:hover{
+    color: aliceblue;
+}
+body{
+    margin: 0px;
+}
+
+
+.container{
+    padding: 10px 12px;
+    background-position: center center;
+    background-size: cover;
+    justify-content: center;
+
+    
+}
+
+
+.cards{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0),
+        rgba(0,0,0,0.5)
+    )
+    ,url("images/fontcard1.jpg");
+    background-size: cover;
+    border-radius: 15px;
+
+    
+    justify-content: space-evenly;   
+    padding: 15px;
+    margin: 40px;
+    
+}
+
+
+
+.cards p{
+    
+}
+
+.logo{
+    border-radius: 50px;
+    
+}
+.mlgo img{
+    width: 60px;
+}
+
+
+
+@media (min-width: 850px){
+     .ppsl{
+        --state-hamburguer:scale(0);
+        --state-menu: translate(0);
+        justify-content: space-between;
+    }
+    
+    .ppsl:target{
+        --state-close: scale(0);
+    }
+
+    .nav__links{
+        padding: 10px;
+        background-color: unset;
+        position: inherit;
+        gap: 1.5em;
+        grid-auto-flow: column;
+        
+        transform: unset;
+
+        grid-column: -2/-1;
+        grid-row: 1/2;
+        
+    }
+
+
+    .nav__link{
+        font-size: 1rem;
+        letter-spacing: none;
+    }
+    .nav__link img{
+        width: 30px;
+        border-radius: 10px;
+        align-items: center;
+        
+    }
+    .ppsl button{
+        border-radius: 30px;
+        text-decoration: none;
+        color: azure;
+        background-color: black;
+        width: 144px;
+        font-size: 3vh;
+        border: none;
+        font-family: 'Oswald', sans-serif;
+        
+    }
+    .ppsl button:hover{
+        background-color: rgb(180, 99, 52);
+        
+    }
+    .ppsl a{
+        color: aliceblue;
+    }
+    .ppsl button a:hover{
+        color: aliceblue;
+    }
+    section{
+        padding: 50px;
+    }
+
+    .mvcrd .container{
+        margin-left: 15px;
+        margin-right: 15px;
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        background-position: center center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+
+
+
+    .cards{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0),
+            rgba(0,0,0,0.5)
+        )
+        ,url("images/fontcard1.jpg");
+        background-size: cover;
+        border-radius: 15px;
+    
+        min-width: 50px;
+        justify-content: space-evenly;   
+        padding: 15px;
+        margin: 40px;
+        transition: all 0.25s;
+    }
+
+    .cards:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    }
+
+
+
+}
+
+
+
+    
