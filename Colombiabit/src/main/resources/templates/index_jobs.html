@@ -70,8 +70,29 @@
                 <div>
                     <div class="carta">
                         <img class="amdlogo" src="../mi propia pagina web/imagenes/882700c.png" alt style="width: 164px; height: 164px;">
-                        <h3></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt vero corporis incidunt saepe qui commodi quasi neque veniam quam, aspernatur est beatae maxime animi sed reiciendis mollitia ducimus veritatis repellendus?</p>
+                        <h3></h3>                     
+                        <table>
+                    <tr th:each="usuario: ${usuarios}">                    
+                    <th>Nombre</th>
+                    <td th:text="${usuario.nombres}"></td>                                               
+                    </tr>
+                    
+                    <tr th:each="usuario: ${usuarios}">                    
+                    <th>Apellidos</th>
+                    <td th:text="${usuario.apellidos}"></td>                                               
+                    </tr>
+                    
+                    <tr th:each="usuario: ${usuarios}">                    
+                    <th>Correo electronico</th>
+                    <td th:text="${usuario.correoelectronico}"></td>                                               
+                    </tr>
+                    
+                    <tr th:each="usuario: ${usuarios}">                    
+                    <th>Edad</th>
+                    <td th:text="${usuario.edad}"></td>                                               
+                    </tr>                                   
+                    </table>
+                        <p>llitia ducimus veritatis repellendus?</p>
                         <button>Ver Perfil</button>
                     </div>
                     <div class="carta">

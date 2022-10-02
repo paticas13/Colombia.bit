@@ -5,10 +5,12 @@
 package com.co;
 
 import com.co.dao.userDAO;
+import com.co.pojo.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-//import org.springframework.ui.Model;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 //Colombiabit
 /**
@@ -28,13 +30,22 @@ public class Controlador {
     
     @GetMapping("/registro")
     public String registro(){
-        //var usuarios = userDao.findAll();
-        //model.addAttribute("usuarios", usuarios);
+        
         return "registro";
     }
     
     @GetMapping("/index_jobs")
-    public String index_jobs(){
+    public String index_jobs(Model model){
+        var usuarios = userDao.findAll();
+        model.addAttribute("usuarios", usuarios);
         return "index_jobs";
     }
+    
+    @PostMapping("/guardar")
+    public String guardar(Usuario usuarios1){
+        userDao.save(usuarios1);
+        return "redirect:/registro";
+    }
+    
+    
 }

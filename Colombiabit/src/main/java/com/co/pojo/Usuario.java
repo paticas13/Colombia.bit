@@ -18,14 +18,12 @@ import lombok.Data;
 public class Usuario implements Serializable {
     
     @Id
-    private Integer Cedula;
+    private Integer cedula;
     private String nombres;
-    private String apellido;
-    private String correoElectronico;
-    private String telefono; //Cambiar a number
-    private String contrasena;
-    private Integer edad; //Cambiar a number
-    private String foto; //Averiguar que tipo de dato en java tiene una relación con un tipo BLOB de BD
-    private Integer cv; //Averiguar que tipo de dato en java tiene una relación con un tipo BLOB de BD
+    private String apellidos;
+    private String correoelectronico;
+    private Integer telefono; //Cambiar a number
+    private String contraseña;
+    private Integer edad; //Cambiar a number   //Averiguar que tipo de dato en java tiene una relación con un tipo BLOB de BD
     private Integer id_Ramas; //posible modificación futura
 }

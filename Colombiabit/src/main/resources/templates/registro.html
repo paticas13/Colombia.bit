@@ -30,19 +30,25 @@
         </a>
     </header>
     <div class="registro-sesion">
-        <form class="formulario">
+        <form class="formulario" method="post" th:action="@{/guardar}" th:object="${usuarios1}">
             <h2 class="cuenta gratis">
                 ¿Eres nuevo por aqui?<br>
                 Crea una cuenta ya!!
             </h2>
             
-            <input type="text" placeholder="Nombre">
-            <input type = "text" placeholder = "Apellidos">
-            <input type="text" placeholder="Cedula">
-            <input type="date" name="Fecha de Nacimiento" id="">
-            <input type = "email" placeholder = "Email">
-            <input type = "password" placeholder = "Contraseña">
-            <input type = "button" value = "Registrarse">
+            <input name="nombres" type="text" placeholder="Nombres">
+            
+            <input name="apellidos" type = "text" placeholder = "Apellidos">
+            
+            <input name="cedula" type="number" placeholder="Cedula">
+            
+            <input name="edad" type="number" placeholder="Edad">
+            
+            <input name="correoelectronico" type = "text" placeholder = "Email">
+            
+            <input name="contraseña" type = "text" placeholder = "Contraseña">
+            
+            <input name="submit" type = "submit" value = "Registrarse">
             <input class="sign-up-btn" type = "button" value = "Iniciar Sesion">
             <input type = "button" value = "Cancelar">
 
@@ -59,21 +65,21 @@
             <input type = "email" placeholder = "Email">
             <input type = "password" placeholder = "Contraseña">
             <input type = "button" value = "Iniciar Sesion">
-            <input class="sign-in-btn" type = "button" value = "Registrarse">
+            <input class="sign-in-btn" type = "button" value = "Registrar">
             <input type = "button" value = "Cancelar">
     
         </form>
         
     <!--Inicio de la tabla de prueba en la conexión con la base de datos -->
-        <h2>Listar Clientes de mi base de datos</h2>
-  <!--<table> 
+        <!--<h2>Listar Clientes de mi base de datos</h2>
+  <table> 
       <tr> 
           <th>Cedula</th>
           <th>Nombre del usuario</th>
       </tr>
       
       <tr th:each="usuario: ${usuarios}">
-          <td th:text="${usuario.Cedula}"></td>
+          <td th:text="${usuario.cedula}"></td>
       </tr>
   </table>-->
         <!-- Fin de la prueba de la conexion de datos -->
